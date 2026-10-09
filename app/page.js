@@ -19,16 +19,18 @@ export default function Home() {
   return (
     <>
       <a className="skip-link" href="#main">মূল বিষয়বস্তুতে যান</a>
-      <div className="topbar">আমাদের ক্লাব। আমাদের সমাজ। আমাদের খেলা।</div>
+      <div className="topbar"><span>SONAMOYEE UNITED FC</span><span>আমাদের ক্লাব। আমাদের সমাজ। আমাদের খেলা।</span><span>THE BEAUTIFUL GAME ↗</span></div>
+      <div className="header-backdrop" style={{ '--header-image': `url("${assetPath('/hero.png')}")` }}>
       <header className="header">
         <a href="#" className="brand" aria-label="সোনাময়ী ইউনাইটেডের মূল পাতা"><Crest small /><span>সোনাময়ী<span className="brand-sub">ইউনাইটেড ফুটবল ক্লাব</span></span></a>
-        <nav aria-label="প্রধান মেনু"><a href="#club">আমাদের ক্লাব</a><a href="#fixtures">ম্যাচের সূচি</a><details className="squad-menu"><summary>আমাদের স্কোয়াড <span aria-hidden="true">⌄</span></summary><div className="squad-dropdown"><a className="squad-overview-link" href="#squad">সব স্কোয়াড দেখুন ↗</a>{squads.map((squad) => <div className="squad-menu-group" key={squad.id}><a className="squad-menu-team" href={`#${squad.id}`}>{squad.name}</a>{positionGroups.map((group) => <a key={group.id} href={`#${squad.id}-${group.id}`}>{group.name}</a>)}</div>)}</div></details><a href="#news">ক্লাবের খবর</a><a href="#donors">ডোনার</a><a className="nav-cta" href="#join">ক্লাবে যোগ দিন <span>↗</span></a></nav>
+        <nav aria-label="প্রধান মেনু"><a href="#club">আমাদের ক্লাব</a><a href="#fixtures">ম্যাচের সূচি</a><details className="squad-menu"><summary>আমাদের স্কোয়াড <span aria-hidden="true">⌄</span></summary><div className="squad-dropdown"><a className="squad-overview-link" href="#squad">সব স্কোয়াড দেখুন ↗</a>{squads.map((squad) => <div className="squad-menu-group" key={squad.id}><a className="squad-menu-team" href={`#${squad.id}`}>{squad.name}</a>{positionGroups.map((group) => <a key={group.id} href={`#${squad.id}-${group.id}`}>{group.name}</a>)}</div>)}</div></details><a href="#news">ক্লাবের খবর</a><a href="#donors">ডোনার</a></nav>
       </header>
       <Notice notices={notices} />
+      </div>
       <main id="main">
         <section className="hero">
           <div className="hero-copy"><p className="eyebrow"><span className="dot" /> সোনাময়ী ইউনাইটেডে স্বাগতম</p><h1>এক ক্লাব।<br />এক সমাজ।<br /><em>ফুটবলের বন্ধনে একসাথে।</em></h1><p className="hero-description">খেলার চেয়েও বেশি—আপন হয়ে ওঠার এক ঠিকানা। ফুটবলের প্রতি ভালোবাসা আর দলগত চেষ্টায় আমরা সবাইকে একসাথে যুক্ত করি।</p><div className="hero-actions"><a className="button button-lime" href="#fixtures">ম্যাচের সূচি দেখুন <span>↗</span></a><a className="text-link" href="#club">আমাদের ক্লাবকে জানুন <span>→</span></a></div><div className="hero-bottom"><span className="mini-ball">⚽</span><span>শিকড় আমাদের এখানেই।<br /><strong>স্বপ্নের কোনো সীমা নেই।</strong></span></div></div>
-          <div className="hero-art"><FootballScene /></div>
+          <div className="hero-art"><div className="hero-art-title"><span>THE UNITED SPIRIT</span><span>ফুটবল আমাদের পরিচয়</span></div><FootballScene /><div className="hero-art-footer"><span>ONE TEAM. ONE DREAM.</span><span>SUFC ↗</span></div></div>
         </section>
         <div className="values-strip"><span>ভালোবাসা নিয়ে খেলুন</span><span aria-hidden="true">✦</span><span>একসাথে পাশে থাকুন</span><span aria-hidden="true">✦</span><span>আমাদের ভবিষ্যৎ গড়ুন</span><span aria-hidden="true">✦</span><span>সোনাময়ী ইউনাইটেড</span></div>
         <section id="club" className="section about"><div><p className="eyebrow">০১ / আমাদের ক্লাব</p><h2>সমাজের সঙ্গে গভীর বন্ধন।<br /><span>খেলার টানে এগিয়ে চলা।</span></h2></div><div className="about-copy"><p>ফুটবলকে ভালোবাসেন এমন সবার জন্য সোনাময়ী ইউনাইটেড। মাঠে ও মাঠের বাইরে আমরা কঠোর পরিশ্রম, একে অপরের পাশে থাকা এবং আমাদের সমাজকে গর্বিত করায় বিশ্বাস করি।</p><p>আপনি খেলোয়াড় হোন, সমর্থক হোন কিংবা ফুটবলের সঙ্গে নতুন পরিচয় হোক—এখানে আপনার জন্য জায়গা আছে।</p><a className="text-link dark" href="#join">আমাদের পথচলার সঙ্গী হোন <span>↗</span></a></div></section>

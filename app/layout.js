@@ -1,4 +1,5 @@
 import './globals.css';
+import './premium.css';
 
 export const metadata = {
   title: 'সোনাময়ী ইউনাইটেড ফুটবল ক্লাব | এক ক্লাব। এক সমাজ।',

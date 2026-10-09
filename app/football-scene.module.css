@@ -1,8 +1,8 @@
-.scene{position:relative;z-index:1;width:100%;padding:28px 24px 22px}
+.scene{position:relative;z-index:1;width:100%;max-width:390px;padding:20px 16px 18px;margin:22px auto;background:#08291e60;border:1px solid #d5ee8325;box-shadow:0 20px 50px #03150e35;transform:rotate(-5deg)}
 .heading{display:flex;align-items:center;gap:10px;font-size:12px;color:#d5ee83}
 .heading strong{display:block;font-size:9px;font-weight:400;color:#b4c6b8;margin-top:4px}
 .badge{margin-left:auto;border:1px solid #ffffff30;border-radius:20px;padding:6px 9px;font-size:10px;white-space:nowrap}
-.field{display:block;width:100%;max-height:570px;margin:12px auto;filter:drop-shadow(0 15px 18px #08291e55)}
+.field{display:block;width:100%;max-height:400px;margin:12px auto;filter:drop-shadow(0 15px 18px #08291e55)}
 .player{animation:run 8s ease-in-out infinite;animation-delay:var(--delay)}
 .legs{transform-box:fill-box;transform-origin:center;animation:stride .45s ease-in-out infinite alternate;animation-delay:var(--delay)}
 .ball{animation:pass 16s linear infinite}
@@ -13,5 +13,6 @@
 @keyframes run{0%,100%{transform:translate(0,0)}25%{transform:translate(var(--dx),var(--dy))}50%{transform:translate(0,var(--dy))}75%{transform:translate(calc(var(--dx) * -.5),calc(var(--dy) * -.5))}}
 @keyframes stride{from{transform:rotate(-12deg)}to{transform:rotate(12deg)}}
 @keyframes pass{0%,100%{transform:translate(275px,325px)}12%{transform:translate(145px,345px)}25%{transform:translate(265px,405px)}37%{transform:translate(385px,460px)}50%{transform:translate(285px,510px)}62%{transform:translate(120px,450px)}75%{transform:translate(220px,375px)}87%{transform:translate(370px,280px)}}
-@media(max-width:800px){.scene{max-width:480px;padding:24px 18px}.field{max-height:520px}}
+@media(max-width:800px){.scene{max-width:350px;padding:18px 16px;margin:22px auto}.field{max-height:360px}}
+@media(max-width:480px){.scene{width:92%;max-width:300px;transform:rotate(-3deg)}.field{max-height:300px}.heading{font-size:10px}.heading strong{font-size:8px}.badge{font-size:8px;padding:5px 6px}.legend{font-size:9px;gap:14px}}
 @media(prefers-reduced-motion:reduce){.player,.legs,.ball{animation:none}.ball{transform:translate(275px,325px)}}
