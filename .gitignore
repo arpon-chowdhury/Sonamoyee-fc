@@ -1,0 +1,9 @@
+node_modules/
+.runtime/
+.npm-cache/
+.next/
+out/
+.env*
+!.env.example
+.DS_Store
+*.log
