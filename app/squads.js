@@ -1,3 +1,5 @@
+import { assetPath } from './asset-path';
+
 // Replace names, numbers, and image paths here when the real squads are ready.
 const positions = ['গোলরক্ষক', 'ডিফেন্ডার', 'ডিফেন্ডার', 'ডিফেন্ডার', 'ডিফেন্ডার', 'মিডফিল্ডার', 'মিডফিল্ডার', 'মিডফিল্ডার', 'ফরোয়ার্ড', 'ফরোয়ার্ড', 'ফরোয়ার্ড'];
 
@@ -53,7 +55,7 @@ export default function Squads() {
           <div className="squad-heading">
             <div><p className="eyebrow">{squad.label}</p><h3>{squad.name}</h3><p className="squad-description">{squad.description}</p></div>
             <div className="squad-coach">
-              <img src={squad.coach.image} alt="" width={64} height={64} />
+              <img src={assetPath(squad.coach.image)} alt="" width={64} height={64} />
               <div><span>প্রধান কোচ</span><h4>{squad.coach.name}</h4></div>
             </div>
           </div>
@@ -68,7 +70,7 @@ export default function Squads() {
               <article className="player-card" key={player.id}>
                 <div className="player-portrait">
                   <span className="player-number" aria-label="জার্সি নম্বর">{player.number.toLocaleString('bn-BD')}</span>
-                  <img src={player.image} alt={`${player.name} — নমুনা অ্যাভাটার`} width={240} height={240} loading="lazy" />
+                  <img src={assetPath(player.image)} alt={`${player.name} — নমুনা অ্যাভাটার`} width={240} height={240} loading="lazy" />
                   {player.captain && <span className="captain-badge">অধিনায়ক</span>}
                 </div>
                 <div className="player-info"><p>{player.position}</p><h4>{player.name}</h4></div>

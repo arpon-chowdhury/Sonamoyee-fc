@@ -1,11 +1,12 @@
 import styles from './football-scene.module.css';
+import { assetPath } from './asset-path';
 
 const formation = [[250, 68], [90, 155], [195, 145], [305, 145], [410, 155], [110, 240], [245, 225], [385, 240], [130, 320], [270, 305], [395, 320]];
 
 export default function FootballScene() {
   return (
     <div className={styles.scene}>
-      <div className={styles.heading}><img src="/logo.svg" alt="" width="42" height="42" /><span>সোনাময়ী ইউনাইটেড<strong>ফুটবলের বন্ধনে একসাথে</strong></span><span className={styles.badge}>১১ বনাম ১১</span></div>
+      <div className={styles.heading}><img src={assetPath('/logo.svg')} alt="" width="42" height="42" /><span>সোনাময়ী ইউনাইটেড<strong>ফুটবলের বন্ধনে একসাথে</strong></span><span className={styles.badge}>১১ বনাম ১১</span></div>
       <svg className={styles.field} viewBox="0 0 500 720" role="img" aria-label="দুই দলের ২২ জন খেলোয়াড়ের অ্যানিমেটেড ফুটবল খেলা">
         <rect x="25" y="30" width="450" height="660" rx="8" fill="#286044" />
         {Array.from({ length: 6 }, (_, i) => <rect key={i} x="25" y={30 + i * 110} width="450" height="55" fill="#ffffff" opacity=".035" />)}

@@ -17,8 +17,18 @@ Open http://localhost:3000.
 
 ```sh
 npm run build
-npm start
 ```
+
+The build exports the site to `out/` for static hosting.
+
+## GitHub Pages
+
+Live site: https://arpon-chowdhury.github.io/Sonamoyee-fc/
+
+Every push to `main` runs `.github/workflows/deploy-pages.yml` to build and deploy
+the site. The workflow sets `NEXT_PUBLIC_BASE_PATH=/Sonamoyee-fc` so scripts,
+styles, and images load correctly at the repository URL. Local development uses
+the root path as usual.
 
 ## Customize
 

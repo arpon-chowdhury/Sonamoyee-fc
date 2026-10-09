@@ -1,3 +1,5 @@
+import { assetPath } from './asset-path';
+
 // Replace these sample names and image paths with the club's donor details.
 export const donors = [
   { id: 'donor-1', name: 'মো. আবদুল করিম', image: '/avatar-placeholder.svg' },
@@ -21,7 +23,7 @@ export default function Donors() {
         {donors.map((donor) => (
           <article className="donor-card" key={donor.id}>
             <div className="donor-portrait">
-              <img src={donor.image} alt={`${donor.name} — নমুনা অ্যাভাটার`} width={160} height={160} loading="lazy" />
+              <img src={assetPath(donor.image)} alt={`${donor.name} — নমুনা অ্যাভাটার`} width={160} height={160} loading="lazy" />
             </div>
             <p>ক্লাবের শুভাকাঙ্ক্ষী</p>
             <h3>{donor.name}</h3>

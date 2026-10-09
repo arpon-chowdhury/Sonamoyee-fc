@@ -1,4 +1,5 @@
 import FootballScene from './football-scene';
+import { assetPath } from './asset-path';
 import Donors from './donors';
 import Notice from './notice';
 import { notices } from './notices';
@@ -11,7 +12,7 @@ const fixtures = [
 ];
 
 function Crest({ small = false }) {
-  return <img className={`club-logo ${small ? 'club-logo-small' : ''}`} src="/logo.svg" alt="সোনাময়ী ইউনাইটেডের লোগো" width={small ? 64 : 360} height={small ? 64 : 360} />;
+  return <img className={`club-logo ${small ? 'club-logo-small' : ''}`} src={assetPath('/logo.svg')} alt="সোনাময়ী ইউনাইটেডের লোগো" width={small ? 64 : 360} height={small ? 64 : 360} />;
 }
 
 export default function Home() {
